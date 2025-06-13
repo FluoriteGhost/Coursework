@@ -14,3 +14,14 @@ import { RouterLink } from 'vue-router'
 
 </nav>
 </template>
+
+<style scoped>
+nav
+{
+  display: flex;
+  position:absolute;
+  top: 0px;
+  background-color: #14471E;
+}
+
+</style>
