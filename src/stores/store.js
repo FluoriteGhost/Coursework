@@ -2,49 +2,50 @@ import { defineStore } from 'pinia'
 
 export const useCounterStore = defineStore('counter', {
     state: () => ({
-        hedgehog: "./components/images/hedgehog.jpg",
-        knit1: null,
-        knit2: null,
+        group: "./src/images/group.jpg",
+        hedgehog: "./src/images/hedgehog.jpg",
+        knit1: "./src/images/dog.jpg",
+        knit2: "./src/images/cat.jpg",
         knittingimages1: [
             {
                 name: 'dog',
-                fimage: "./components/images/dog.jpg",
+                fimage: "./src/images/dog.jpg",
             },
             {
                 name: 'bee',
-                fimage: "./components/images/bee.jpg",
+                fimage: "./src/images//bee.jpg",
             },
             {
                 name: 'capybara',
-                fimage: "./components/images/capybara.jpg",
+                fimage: "./src/images/capybara.jpg",
             },
         ],
             knittingimages2: [
             {
                 name: 'bear',
-                fimage: "./components/images/bear.jpg",
+                fimage: "./src/images/bear.jpg",
             },
             {
                 name: 'goose',
-                fimage: "./components/images/goose.jpg",
+                fimage: "./src/images/goose.jpg",
             },
             {
                 name: 'cat',
-                fimage: "./components/images/cat.jpg",
+                fimage: "./src/images/cat.jpg",
             },
         ],
         sewingimages: [
             {
                 name: 'doll1',
-                fimage: "./components/images/doll1.jpg",
+                fimage: "./src/images/doll1.jpg",
             },
             {
                 name: 'doll2',
-                fimage: "./components/images/doll2.jpg",
+                fimage: "./src/images/doll2.jpg",
             },
             {
                 name: 'dollbag',
-                fimage: "./components/images/dollbag.jpg",
+                fimage: "./src/images/dollbag.jpg",
             },
         ],
     }),
@@ -70,12 +71,12 @@ export const useCounterStore = defineStore('counter', {
             })
                 .then((response) => response.json())
                 .then((json) => console.log(json)); 
-            }
-        },
-        created () {
+            },
+        imagechange() {
             setInterval(() => {
                 this.knit1 = this.knittingimages1[Math.floor(Math.random()*this.knittingimages1.length)].fimage;
                 this.knit2 = this.knittingimages2[Math.floor(Math.random()*this.knittingimages2.length)].fimage;
             }, 10000);
         }
+    },
     })
