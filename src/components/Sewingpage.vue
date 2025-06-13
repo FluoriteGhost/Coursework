@@ -8,7 +8,7 @@ const store = useCounterStore()
 <div class="container text-center">
   <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
     <div class="col">
-      <img src="{{ store.sewingimages[0].fimage }}">
+      <img :src="store.sewingimages[0].fimage" width="200" height="300">
     </div>
     <div class="col">
       <p>От 10 лет - шьем одежду для себя - свитшоты, футболки, топы, шорты.
@@ -17,7 +17,7 @@ const store = useCounterStore()
 Запишите ребёнка на занятия и вы удивитесь, что ваш ребёнок умеет!</p>
     </div>
     <div class="col">
-      <img src="{{ store.sewingimages[1].fimage }}">
+      <img :src="store.sewingimages[1].fimage" width="200" height="300">
     </div>
   </div>
   <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
@@ -28,7 +28,7 @@ const store = useCounterStore()
 Запишите ребёнка на занятие и вы удивитесь, что умеет ваш ребёнок!</p>
     </div>
     <div class="col">
-      <img src="{{ store.sewingimages[2].fimage }}">
+      <img :src="store.sewingimages[2].fimage" width="200" height="300">
     </div>
     <div class="col">
       <p>От 14 лет - изготовление изделия начинается с построения выкройки по своим меркам, учимся правильно раскладывать детали на ткани, кроить, работаем с оверлоком, швейной машинкой, парогенератором. 

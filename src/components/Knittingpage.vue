@@ -1,7 +1,7 @@
 <script setup>
 import { useCounterStore } from '@/stores/store'
 const store = useCounterStore()
-
+store.imagechange()
 </script>
 
 <template>
@@ -9,7 +9,7 @@ const store = useCounterStore()
 <div class="container text-center">
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
         <div class="col">
-            <img :src="knit1">
+            <img :src="store.knit1" width="200" height="250">
         </div>
         <div class="col">
             <p> Дети вяжут. 
@@ -19,7 +19,7 @@ const store = useCounterStore()
                 Запишите ребёнка на занятие и вы удивитесь, что ваш ребёнок умеет!</p>
         </div>
         <div class="col">
-            <img :src="knit2">
+            <img :src="store.knit2" width="200" height="250">
         </div>
     </div>
 </div>

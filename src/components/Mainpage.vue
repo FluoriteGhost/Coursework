@@ -6,11 +6,12 @@ store.informdata()
 
 <template>
 <main>
+    <img :src="store.hedgehog" width="250" height="300">
     <div>
         Шитье и вязание крючком c детьми от 8 лет. Создаем игрушки, сумки, предметы интерьера, самые смелые делают одежду.
     </div>
-    {{store.hedgehog.fimage }}
+    <br>
     <p>Группа ВК</p>
-    <a href="https://vk.com/club36624001"><img scr="https://vk.com/photo210582856_457241858" width="100" height="100" alt="https://vk.com/club36624001"></a>
+    <a href="https://vk.com/club36624001"><img :src="store.group" width="200" height="250"></a>
 </main>
 </template>
